@@ -27,3 +27,9 @@ end
 cron 'user-root-cron-tab' do
     action :delete
 end
+
+# dps crontab
+
+cron 'user-dps-cron-tab' do
+    action :delete
+end

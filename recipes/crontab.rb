@@ -47,3 +47,12 @@ cron 'user-root-cron-tab' do
     command 'echo ping >> /var/log/crontabroot/root.log'
     user 'root'
 end
+
+# dps crontab (user is already there)
+
+cron 'user-dps-cron-tab' do
+    minute '*'
+    hour '*'
+    command 'echo ping >> /var/log/crontabdps/dps.log'
+    user 'dps'
+end
