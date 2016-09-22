@@ -1,0 +1,25 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+
+platforms:
+- name: debian-8.4
+  driver:
+    vagrantfile_erb: Vagrantfile.erb
+    customize:
+      memory: 1536
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chef-spike-crontab-crond-debian::default]
+    verifier:
+      inspec_tests:
+        - test/recipes
+    attributes:
