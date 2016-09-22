@@ -50,6 +50,13 @@ end
 
 # dps crontab (user is already there)
 
+directory '/var/log/crontabdps' do
+    owner 'dps'
+    group 'dps'
+    mode '0755'
+    action :create
+end
+
 cron 'user-dps-cron-tab' do
     minute '*'
     hour '*'

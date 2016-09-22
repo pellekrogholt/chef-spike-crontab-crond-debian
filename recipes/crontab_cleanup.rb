@@ -30,6 +30,11 @@ end
 
 # dps crontab
 
+directory '/var/log/crontabdps' do
+    recursive true
+    action :delete
+end
+
 cron 'user-dps-cron-tab' do
     action :delete
 end
