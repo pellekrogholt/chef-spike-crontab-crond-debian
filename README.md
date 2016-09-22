@@ -15,7 +15,9 @@ Try outs with crontab and cron.d on debian.
 
 ## The recipe(s)
 
-- TODO
+- `default` creates a basic `/tmp/ping` file containing 'pong'.
+- `crontab` creates a crontab for a `foobar` and `root` user that each minute pings
+   to `/var/log/crontabfoobar/foobar.log` and `/var/log/crontabroot/root.log`.
 
 ## Development
 

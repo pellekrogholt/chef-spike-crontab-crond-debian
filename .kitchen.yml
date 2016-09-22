@@ -19,6 +19,7 @@ suites:
   - name: default
     run_list:
       - recipe[chef-spike-crontab-crond-debian::default]
+      - recipe[chef-spike-crontab-crond-debian::crontab]
     verifier:
       inspec_tests:
         - test/recipes
