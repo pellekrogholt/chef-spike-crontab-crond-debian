@@ -1,0 +1,9 @@
+DEPENDENCIES
+  chef-spike-crontab-crond-debian
+    path: .
+    metadata: true
+  cron (~> 2.0.0)
+
+GRAPH
+  chef-spike-crontab-crond-debian (0.1.3)
+  cron (2.0.0)
