@@ -1,4 +1,4 @@
-# foobar crontab
+# foobar user/group
 
 user 'foobar' do
     action :remove
@@ -37,4 +37,14 @@ end
 
 cron 'user-dps-cron-tab' do
     action :delete
+end
+
+# dps user/group
+
+user 'dps' do
+    action :remove
+end
+
+group 'dps' do
+    action :remove
 end
