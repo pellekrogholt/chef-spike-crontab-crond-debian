@@ -32,6 +32,32 @@ cron 'user-foobar-cron-tab' do
     user 'foobar'
 end
 
+# foobar2 crontab
+
+group 'foobar2' do
+    action :create
+end
+
+user 'foobar2' do
+    comment 'User running a crontab'
+    gid 'foobar2'
+    action :create
+end
+
+directory '/var/log/crontabfoobar2' do
+    owner 'foobar2'
+    group 'foobar2'
+    mode '0755'
+    action :create
+end
+
+cron 'user-foobar2-cron-tab' do
+    minute '*'
+    hour '*'
+    command 'echo ping >> /var/log/crontabfoobar2/foobar2.log'
+    user 'foobar2'
+end
+
 # root crontab
 
 directory '/var/log/crontabroot' do
